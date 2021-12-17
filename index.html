@@ -26,14 +26,15 @@
             var a = document.getElementById("num1").value;
             var b = document.getElementById("num2").value;
             var c = document.getElementById("num3").value;
-            function Multiply(a) {
+            // Using Closure
+            function multyply(a) {
                 return function (b) {
                     return function (c) {
                         document.getElementById("results").innerHTML = (a * b * c);
                     }
                 }
             }
-            Multyply(a)(b)(c);
+            multyply(a)(b)(c);
         }
     </script>
 </head>
